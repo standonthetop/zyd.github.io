@@ -16,7 +16,7 @@
 <meta property="og:description" content="1、JDK(java开发工具包):Jdk是提供给java开发人员使用的，包含了java的开发工具和jre，安装了jdk就不用单独安装jre；其中的开发工具：编译工具（javac.exe)   打包工具(jar.exe)等；   2、JRE(java运行环境):包括java虚拟机和java程序所需的核心类库等，如果想要运行一个开发好的java程序，只需要安装jre即可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://blog.zhangruipeng.me/hexo-theme-icarus/gallery/thumbnails/desert.jpg">
-<meta property="og:updated_time" content="2018-12-02T15:51:06.903Z">
+<meta property="og:updated_time" content="2018-12-02T16:28:15.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础">
 <meta name="twitter:description" content="1、JDK(java开发工具包):Jdk是提供给java开发人员使用的，包含了java的开发工具和jre，安装了jdk就不用单独安装jre；其中的开发工具：编译工具（javac.exe)   打包工具(jar.exe)等；   2、JRE(java运行环境):包括java虚拟机和java程序所需的核心类库等，如果想要运行一个开发好的java程序，只需要安装jre即可">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 201 words)
+                    8 minutes read (About 1167 words)
                 </span>
                 
             </div>
@@ -170,7 +170,47 @@
 <blockquote>
 <p>3、Java文件的编译和运行流程：<br>   a 将java代码编写到扩展名为.java的文件中；<br>   b 通过javac命令对该java文件进行编译;<br>   c 通过java命令对生成的class文件进行运行。</p>
 </blockquote>
+<blockquote>
+<p>4、java语言分类：①第一代机器语言；②第二代汇编语言；③第三代高级语言（面向过程——面向对象)</p>
+</blockquote>
+<blockquote>
+<p>5、java语言的特性：①面向对象性；②健壮性；③跨平台性（一次编写，到处运行）——jvm</p>
+</blockquote>
+<blockquote>
+<p>6、基本语法：<br>      ①关键字：被Java语言赋予了特殊含义，用做专门用途的字符串（单词）；<br>      ②标识符：凡是自己可以起名字的地方都叫标识符；标识符是赋予变量、类和方法的名称，可从一个字母、下划线（<em>）或美元符号（$）开始，是大小写区别对待的， 且无最大长度；<br>      ③命名的规则：（一定要遵守，不遵守就会报编译的错误）<br>                a、 由26个英文字母大小写，0-9 ，</em>或 $ 组成 ，数字不可以开头；<br>                b、不可以使用关键字和保留字，但能包含关键字和保留字；<br>                c、Java中严格区分大小写，长度无限制，标识符不能包含空格。</p>
+</blockquote>
+<blockquote>
+<p>7、Java中的名称命名规范：（不遵守，也不会出现编译的错误）<br>               a、包名：多单词组成时所有字母都小写：xxxyyyzzz<br>               b、类名、接口名：多单词组成时，所有单词的首字母大写：XxxYyyZzz<br>               c、变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每<br>                    个单词首字母大写：xxxYyyZzz<br>               d、常量名：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</p>
+</blockquote>
+<blockquote>
+<p>8、java中变量按照数据类型来分类：基本数据类型 vs  引用数据类型(数组   类   接口)<br>      ①基本数据类型：<br>                 整型：byte（8bit）  short   int（默认类型）  long<br>                 浮点型：float  double (默认类型)<br>                 字符型：char（‘ ’）<br>                 布尔类型： boolean（只能取值为true 或false，不能取null）<br>      ②补充：按照在类中存在的位置的不同：成员变量 vs 局部变量</p>
+</blockquote>
+<blockquote>
+<p>9、变量的运算和数据类型转换：<br>      ①自动类型转换：容量小的数据类型自动转换为容量大的数据类型；例：<br>        short s = 12;<br>           int i = s + 2;<br>           注意：byte  short char之间做运算，结果为int型！</p>
+</blockquote>
+<blockquote>
+<p>10、数组：相同数据类型的数据的组合；<br>       1、数组的初始化<br>       ①数组的初始化<br>           int[] scores1 = new int[]{72,90,59};//静态初始化：在声明并初始化数组与给数组相应的元素赋<br>           值操作同时进行。<br>           int scores2[] = new int[3];//动态初始化：在声明并初始化数组与给数组相应的元素赋值操作分<br>           开进行。<br>           scores2[0] = 72;<br>           scores2[1] = 90;<br>           scores2[2] = 59;<br>       ②声明数组的错误写法：<br>           1）String[] names = new String[5]{“AA”,”BB”,”CC”};<br>           2）int i[10];<br>           3）int i = new int[];<br>       注意：不管是动态还是静态初始化数组，一定在创建的时候，就指明了数组的长度！</p>
+</blockquote>
+<pre><code> 2、如何引用数组元素：通过数组的下角标的方式。下角标从0开始，到n-1结束。其中n为数组的
+   长度；
 
+ 3、数组的长度：通过数组的属性length来调用；
+       System.out.println(scores2.length);//3
+
+ 4、如何遍历数组
+for(int i = 0;i &lt; scores1.length;i++){
+   System.out.println(scores1[i]);
+     }
+
+ 5、关于数组元素的默认初始化值
+     1)byte short int long 而言：0
+     2)float double 而言：0.0
+     3)char而言：空格
+     4)boolean而言：false
+     5)引用类型变量而言:null
+ 6、内存的基本结构：   
+  &lt;img class=&quot;image is-128x128 has-mb-6&quot; src=&quot;/zyd.github.io/images/avatar.png&quot; alt=&quot;zydnbb&quot;&gt;
+</code></pre>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -241,7 +281,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        pos
                     </p>
                     <p class="title has-text-weight-normal">
                         2
@@ -251,7 +291,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Category
+                        Kategori
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -261,7 +301,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tag
+                        tag
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -271,7 +311,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/standonthetop/zyd.github.io">
-                Follow</a>
+                IKUTI</a>
         </div>
         
         
@@ -320,7 +360,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            tautan
         </h3>
         <ul class="menu-list">
         
@@ -358,7 +398,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Kategori
             </h3>
             <ul class="menu-list">
             <li>
@@ -379,7 +419,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            awan tag
         </h3>
         <a href="/zyd.github.io/tags/technology/" style="font-size: 10px;">technology</a>
     </div>
@@ -393,7 +433,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Terbaru
         </h3>
         
         <article class="media">
@@ -442,7 +482,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Arsip
         </h3>
         <ul class="menu-list">
         
@@ -466,7 +506,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                tag
             </h3>
             <ul class="menu-list">
                 
@@ -501,7 +541,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Terbaru
         </h3>
         
         <article class="media">
@@ -550,7 +590,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Arsip
         </h3>
         <ul class="menu-list">
         
@@ -574,7 +614,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                tag
             </h3>
             <ul class="menu-list">
                 
@@ -730,7 +770,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Tulis Sesuatu..">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -742,11 +782,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: 'Pos',
+                PAGES: 'Halaman',
+                CATEGORIES: 'Kategori',
+                TAGS: 'Tag',
+                UNTITLED: 'Tanpa Judul',
             },
             CONTENT_URL: '/zyd.github.io/content.json',
         };
