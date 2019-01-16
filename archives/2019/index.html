@@ -2,14 +2,14 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>topwithme</title>
+<title>Archives: 2019 - topwithme</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="topwithme">
-<meta property="og:url" content="https://standonthetop.github.io/zyd.github.io/index.html">
+<meta property="og:url" content="https://standonthetop.github.io/zyd.github.io/archives/2019/index.html">
 <meta property="og:site_name" content="topwithme">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -87,7 +87,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active" href="/zyd.github.io/">Home</a>
+                <a class="navbar-item" href="/zyd.github.io/">Home</a>
                 
                 <a class="navbar-item" href="/zyd.github.io/archives">Archives</a>
                 
@@ -125,162 +125,55 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
-    
-    <div class="card-content article ">
+
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        2019
+        </h3>
+        <div class="timeline">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-16T13:47:59.483Z">2019-01-16</time>
+            <article class="media">
                 
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/zyd.github.io/categories/后端/">后端</a>
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-01-16T13:47:59.483Z">2019-01-16</time>
+                        <a href="/zyd.github.io/2019/01/16/Java后半部分/" class="has-link-black-ter is-size-6">Java基础</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/zyd.github.io/categories/后端/">后端</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 minutes read (About 811 words)
-                </span>
-                
-            </div>
-        </div>
+            </article>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/zyd.github.io/2019/01/16/Java后半部分/">Java基础</a>
-            
-        </h1>
-        <div class="content">
-            <p><img src="https://blog.zhangruipeng.me/hexo-theme-icarus/gallery/thumbnails/plant.jpg" alt="陪你去旅行"></p>
-<h3 id="异常处理："><a href="#异常处理：" class="headerlink" title="异常处理："></a>异常处理：</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1</span>）体系结构</span><br><span class="line">   java.lang.Object</span><br><span class="line">           |----java.lang.Throwable</span><br><span class="line">    			|-------java.lang.Error：错误，java程序对此无能为力，不显式的处理</span><br><span class="line"> 			|-------java.lang.Exception:异常。需要进行处理</span><br><span class="line"> 				|------RuntimeException:运行时异常</span><br><span class="line">					|-----ArrayIndexOutOfBoundsException/NullPointerException/ArithmeticException/ClassCastException</span><br><span class="line">				|------非RuntimeException:编译时异常</span><br><span class="line">				</span><br><span class="line"><span class="hljs-number">2</span>）因为java程序分为javac.exe和java.exe两个过程，在每个过程中，都有可能出现异常。故分为编译    时异常、运行时异常；</span><br><span class="line">      <span class="hljs-number">2.1</span>）对于运行时异常比较常见，可以不显式的来处理。</span><br><span class="line">      <span class="hljs-number">2.2</span>）对于编译时异常，必须要显式的处理：编译时异常，不是说有异常才处理，而是存在异常的隐患，必须在编译前，提示程序，万一出现异常，如何处理！</span><br><span class="line"></span><br><span class="line"><span class="hljs-number">3</span>）如何处理异常？</span><br><span class="line">     java 中的“抓抛模型”</span><br><span class="line">     <span class="hljs-number">3.1</span>）<span class="hljs-string">"抛"</span>：当我们执行代码时，一旦出现异常，就会在异常的代码处生成一个对应的异常类型的对象，并将此对象抛出。(自动抛出   / 手动抛出)；</span><br><span class="line">      &gt;一旦抛出此异常类的对象，那么程序就终止执行；</span><br><span class="line">      &gt;此异常类的对象抛给方法的调用者。</span><br><span class="line">     <span class="hljs-number">3.2</span>）<span class="hljs-string">"抓"</span>：抓住上一步抛出来的异常类的对象。如何抓？即为异常处理的方式</span><br><span class="line">    java 提供了两种方式用来处理一个异常类的对象：</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/zyd.github.io/2019/01/16/Java后半部分/#more">Read More</a>
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-01-16T13:47:59.482Z">2019-01-16</time>
+                        <a href="/zyd.github.io/2019/01/16/Java前半部分/" class="has-link-black-ter is-size-6">Java基础</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/zyd.github.io/categories/后端/">后端</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </article>
+        
         </div>
-        
-        
     </div>
 </div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-16T13:47:59.482Z">2019-01-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/zyd.github.io/categories/后端/">后端</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8 minutes read (About 1180 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/zyd.github.io/2019/01/16/Java前半部分/">Java基础</a>
-            
-        </h1>
-        <div class="content">
-            <p><img src="https://blog.zhangruipeng.me/hexo-theme-icarus/gallery/thumbnails/desert.jpg" alt="陪你去旅行"></p>
-<blockquote>
-<p>1、JDK(java开发工具包):Jdk是提供给java开发人员使用的，包含了java的开发工具和jre，安装了jdk就不用单独安装jre；其中的开发工具：编译工具（javac.exe)   打包工具(jar.exe)等；</p>
-</blockquote>
-<blockquote>
-<p>2、JRE(java运行环境):包括java虚拟机和java程序所需的核心类库等，如果想要运行一个开发好的java程序，只需要安装jre即可</p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/zyd.github.io/2019/01/16/Java前半部分/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-02T08:45:03.000Z">2018-12-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/zyd.github.io/categories/模板/">模板</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 79 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/zyd.github.io/2018/12/02/模板/">模板</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><ul>
-<li>列表1</li>
-<li>列表2<br>  a 字段列表1<br>  b 字段列表2</li>
-<li>列表3</li>
-</ul>
-<hr>
-<hr>
-<p><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">导航1</a></p>
-<p><a href="https://github.com/standonthetop/zyd.github.io/blob/master/images/avatar.png" target="_blank" rel="noopener">图片名</a></p>
-<p><em>字体是斜线的</em><br><strong>字体是不是加粗了</strong></p>
-<p><code>&lt;html&gt;&lt;/html&gt;</code></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;我是标题&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>我的内容是引用的</p>
-</blockquote>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
 
 
 </div>
